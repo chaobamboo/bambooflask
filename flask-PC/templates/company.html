@@ -6,15 +6,20 @@
 
 <section class="conA thick_band">
   <div class="container"> <img src="static/pictures/original-crop-u3278.jpg" align="center">
+<<<<<<< HEAD
 	  <h1>{% if company_name %}
         {{ company_name}}
         {% endif %}</h1>
+=======
+	  <h1> {{ company_name}} </h1>
+>>>>>>> 85fbf7ed99bdedf1d3557ceacd1ef771dc115ab4
   </div>
 </section>
 
 <section class="conB">
   <div class="container">
     <div class="text">
+<<<<<<< HEAD
       <h1><span>{% if company_mission %}
                    {{ company_mission  }}
                 {% endif %}</span></h1>
@@ -94,6 +99,77 @@
 
 
 
+=======
+      <h2><span>所属</span></h2>
+	  <p>{{ user_company_name}}</p>
+      <h3><span>役職</span></h3>
+	  <p>
+          {% if user_position %}
+             {{ user_position  }}
+          {% endif %}
+	  </p>
+    </div>
+    <div class="text">
+      <h2><span>自己紹介</span></h2>
+      <div class="textbox">
+        <p>
+          {% if user_whoiam %}
+             {{ user_whoiam  }}
+          {% endif %}
+		</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="conC">
+  <div class="container">
+    <div class="text">
+      <h2><span>
+      {% if user_last_name  %}
+	  {{ user_last_name  }} {{ user_first_name  }} さんイチオシのサービス
+          {% endif %}
+	  </span></h2>
+      <p></p>
+    </div>
+  </div>
+</section>
+<section class="conD">
+  <div class="container">
+    <div class="photo"><img src="static/pictures/icon_slack100x100bb.jpg" alt="img" width="150px" height="150px"></div>
+    <div class="text">
+      <h2>Slack</h2>
+      <h3>社内チャット</h3>
+      <p>圧倒的力で成約してくれました</p> <img src="static/pictures/スクリーンショット 2017-08-22 152821.png">
+      <p>今まで営業として働いていて、勤怠管理は紙でやっていました。 しかし利用し始めてから、直行直帰した外出先でも勤怠管理が出来るようになったので、残業代もしっかりと出るようになりました。</p>
+    </div>
+  </div>
+</section>
+<hr style="border:0;border-top:3px solid #e6e6fa;">
+<section class="conD">
+  <div class="container">
+    <div class="photo"><img src="static/pictures/icon_googledrive.jpg" alt="img" width="150px" height="150px"></div>
+    <div class="text">
+      <h2>Slack</h2>
+      <h3>社内チャット</h3>
+      <p>圧倒的力で成約してくれました</p> <img src="static/pictures/スクリーンショット 2017-08-22 152821.png">
+      <p>今まで営業として働いていて、勤怠管理は紙でやっていました。 しかし利用し始めてから、直行直帰した外出先でも勤怠管理が出来るようになったので、残業代もしっかりと出るようになりました。</p>
+    </div>
+  </div>
+</section>
+<hr style="border:0;border-top:3px solid #e6e6fa;">
+<section class="conD">
+  <div class="container">
+    <div class="photo"><img src="static/pictures/icon_skype100x100bb.jpg" alt="img" width="150px" height="150px"></div>
+    <div class="text">
+      <h2>Slack</h2>
+      <h3>社内チャット</h3>
+      <p>圧倒的力で成約してくれました</p> <img src="static/pictures/スクリーンショット 2017-08-22 152821.png">
+      <p>今まで営業として働いていて、勤怠管理は紙でやっていました。 しかし利用し始めてから、直行直帰した外出先でも勤怠管理が出来るようになったので、残業代もしっかりと出るようになりました。</p>
+    </div>
+  </div>
+</section>
+>>>>>>> 85fbf7ed99bdedf1d3557ceacd1ef771dc115ab4
 <footer>
   <div class="container">
     <div class="footA">
