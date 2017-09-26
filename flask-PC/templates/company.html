@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+{% block content %}
+  <!-- Form
+  ================================================== -->
+
+
+<section class="conA thick_band">
+  <div class="container"> <img src="static/pictures/original-crop-u3278.jpg" align="center">
+	  <h1> {{ company_name}} </h1>
+  </div>
+</section>
+
+<section class="conB">
+  <div class="container">
+    <div class="text">
+      <h2><span>所属</span></h2>
+	  <p>{{ user_company_name}}</p>
+      <h3><span>役職</span></h3>
+	  <p>
+          {% if user_position %}
+             {{ user_position  }}
+          {% endif %}
+	  </p>
+    </div>
+    <div class="text">
+      <h2><span>自己紹介</span></h2>
+      <div class="textbox">
+        <p>
+          {% if user_whoiam %}
+             {{ user_whoiam  }}
+          {% endif %}
+		</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="conC">
+  <div class="container">
+    <div class="text">
+      <h2><span>
+      {% if user_last_name  %}
+	  {{ user_last_name  }} {{ user_first_name  }} さんイチオシのサービス
+          {% endif %}
+	  </span></h2>
+      <p></p>
+    </div>
+  </div>
+</section>
+<section class="conD">
+  <div class="container">
+    <div class="photo"><img src="static/pictures/icon_slack100x100bb.jpg" alt="img" width="150px" height="150px"></div>
+    <div class="text">
+      <h2>Slack</h2>
+      <h3>社内チャット</h3>
+      <p>圧倒的力で成約してくれました</p> <img src="static/pictures/スクリーンショット 2017-08-22 152821.png">
+      <p>今まで営業として働いていて、勤怠管理は紙でやっていました。 しかし利用し始めてから、直行直帰した外出先でも勤怠管理が出来るようになったので、残業代もしっかりと出るようになりました。</p>
+    </div>
+  </div>
+</section>
+<hr style="border:0;border-top:3px solid #e6e6fa;">
+<section class="conD">
+  <div class="container">
+    <div class="photo"><img src="static/pictures/icon_googledrive.jpg" alt="img" width="150px" height="150px"></div>
+    <div class="text">
+      <h2>Slack</h2>
+      <h3>社内チャット</h3>
+      <p>圧倒的力で成約してくれました</p> <img src="static/pictures/スクリーンショット 2017-08-22 152821.png">
+      <p>今まで営業として働いていて、勤怠管理は紙でやっていました。 しかし利用し始めてから、直行直帰した外出先でも勤怠管理が出来るようになったので、残業代もしっかりと出るようになりました。</p>
+    </div>
+  </div>
+</section>
+<hr style="border:0;border-top:3px solid #e6e6fa;">
+<section class="conD">
+  <div class="container">
+    <div class="photo"><img src="static/pictures/icon_skype100x100bb.jpg" alt="img" width="150px" height="150px"></div>
+    <div class="text">
+      <h2>Slack</h2>
+      <h3>社内チャット</h3>
+      <p>圧倒的力で成約してくれました</p> <img src="static/pictures/スクリーンショット 2017-08-22 152821.png">
+      <p>今まで営業として働いていて、勤怠管理は紙でやっていました。 しかし利用し始めてから、直行直帰した外出先でも勤怠管理が出来るようになったので、残業代もしっかりと出るようになりました。</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footA">
+      <h2></h2>
+      <p> <a href=" "> </a> </p>
+      <nav class="footD">
+        <ul>
+          <li><a href="#"><span class="fa fa-twitter" title="Twitter"></span></a></li>
+          <li><a href="#"><span class="fa fa-facebook" title="Facebook"></span></a></li>
+          <li><a href="#"><span class="fa fa-instagram" title="Instagram"></span></a></li>
+          <li><a href="#"><span class="fa fa-youtube" title="YouTube"></span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="footB">
+      <div>
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#">Top</a></li>
+          <li><a href="#">Imformation</a></li>
+          <li><a href="#">Access</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="footC"> All rights reserved. </div>
+  </div>
+</footer>
+<script src="https://use.fontawesome.com/da82d66dc5.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+  $(function(){
+  $(".headC").click(function(){
+  $(".headB").slideToggle();
+  });
+  });
+</script>
+
+{% endblock %}
