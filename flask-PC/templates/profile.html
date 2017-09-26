@@ -13,7 +13,7 @@
 </nav>
 
 <div class="container-small">
-<a href="X_project.html" class="headA"><img src="static/pictures/naomi.jpg" alt""></a>
+<a href="X_project.html" class="headA"><img src="{{ user_icon}}" alt""></a>
 <button type="button" class="headC">
 <span class="fa fa-bars" title="MENU"></span>
 </button>
@@ -21,7 +21,7 @@
 
 </div>
 </header>
-  
+
 <section class="conA thick_band">
 	<div class="container"> <img src="{{ img_url }}" align="center">
 	  <h1> {{ user_last_name}} {{ user_first_name}} </h1>
@@ -43,7 +43,7 @@
       <h3><span>役職</span></h3>
 	  <p>
           {% if user_position %}
-             {{ user_position  }} 
+             {{ user_position  }}
           {% endif %}
 	  </p>
     </div>
@@ -52,7 +52,7 @@
       <div class="textbox">
         <p>
           {% if user_whoiam %}
-             {{ user_whoiam  }} 
+             {{ user_whoiam  }}
           {% endif %}
 		</p>
       </div>
@@ -145,4 +145,3 @@
 </script>
 
 {% endblock %}
-
