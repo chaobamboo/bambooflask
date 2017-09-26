@@ -2,10 +2,31 @@
 {% block content %}
   <!-- Form
   ================================================== -->
+  <header>
+  <div class="container">
+
+  <nav class="headB">
+  <ul>
+  <li><a href=".html"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+  <li><a href=".html"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+  <li><a href=".html"><i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
+  <li><a href=".html"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+  </ul>
+  </nav>
+
+  <div class="container-small">
+  <a href="X_project.html" class="headA"><img src="{{ user_icon}}" alt""></a>
+  <button type="button" class="headC">
+  <span class="fa fa-bars" title="MENU"></span>
+  </button>
+  </div>
+
+  </div>
+  </header>
 
 
 <section class="conA thick_band">
-  <div class="container"> <img src="{{ user_icon}}" align="center">
+  <div class="container"> <img src="{{ service_background}}" align="center">
 	  <h1>{% if sevice_name %}
         {{ sevice_name}}
         {% endif %}</h1>
