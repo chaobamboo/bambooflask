@@ -18,10 +18,11 @@ def picked_up():
 @app.route('/profile')
 def profile():
     title = "profile"
+    img_url = '/static/pictures/oohuka.jpg'
     return render_template('profile.html',
                            user_company_name='Dreamove',
                            user_position='CEO', user_whoiam='1982年岡山生まれ。高校卒業後上京。18歳から音楽イベント主催し、日本各地での開催や、ノンスポンサーで450人のクルージングイベントを成功させる。 東京～岡山を台風の中、2日間かけてママチャリで走破したことが武勇伝。見かけとは裏腹に、まじめで固い性格&とにかくアツイ。 不動産事業では、紹介＆口コミのみで賃貸紹介や店舗の探しを行っている。 お客様よりもお客様のことを想い夢が実現される空間とご縁を繋ぐことに命をかけている。',user_last_name ='大深',user_first_name ='譲',
-                           title=title)
+                           title=title, img_url=img_url)
 @app.route('/')
 def index():
     title = "ようこそ"

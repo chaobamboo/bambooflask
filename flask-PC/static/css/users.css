@@ -51,7 +51,7 @@ align-items:flex-end;
 justify-content:center;
 height: 30vh;
 min-height: 450px;
-background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../pictures/図書館-crop-u3276.jpg);
+background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../pictures/back.jpg);
 background-position: center;
 background-size: cover;
 color: #fff;
