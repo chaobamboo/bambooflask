@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block content %}
+  <!-- Form
+  ================================================== -->
+
+
+<section class="conA thick_band">
+  <div class="container"> <img src="static/pictures/original-crop-u3278.jpg" align="center">
+	  <h1>{% if company_name %}
+        {{ company_name}}
+        {% endif %}</h1>
+  </div>
+</section>
+
+<section class="conB">
+  <div class="container">
+    <div class="text">
+      <h1><span>{% if company_mission %}
+                   {{ company_mission  }}
+                {% endif %}</span></h1>
+    </div>
+
+    <div class="text">
+      <h2><span>私たちの想い</span></h2>
+      <div class="textbox">
+        <p>
+          {% if company_thought %}
+             {{ company_thought  }}
+          {% endif %}
+        </p>
+      </div>
+    </div>
+    <div class="text">
+      <h2><span>何をしているか</span></h2>
+      <div class="textbox">
+        <p>
+          {% if company_discription %}
+             {{ company_discription  }}
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+    <div class="conA img_band">
+      <p></p>
+    </div>
+</section>
+<section class="conB">
+  <div class="container">
+    <div class="text">
+      <h2><span>私たちの強み</span></h2>
+      <div class="textbox">
+        <p>
+          {% if company_strongpoint %}
+             {{ company_strongpoint  }}
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="conC">
+  <div class="container">
+    <div class="text">
+      <h2><span>
+        {% if company_name %}
+        {{ company_name}}のサービス
+        {% endif %}
+	  </span></h2>
+      <p></p>
+    </div>
+  </div>
+</section>
+{% service_name, service_category, service_message, service_discription in services %}<!-- ここでサービスの一覧を生成したい -->
+<section class="conD">
+  <div class="container">
+    <div class="photo">
+      <img src="{{ service_img }}" alt="img" width="150px" height="150px">
+    </div>
+    <div class="text">
+      <h2>{{ service_name }}</h2>
+      <h3>{{ service_category }}</h3>
+      <p>{{ service_message }}</p>
+      <p>{{ service_discription }}</p>
+    </div>
+  </div>
+</section>
+<hr style="border:0;border-top:3px solid #e6e6fa;">
+{% end %}
+
+
+
+
+
+<footer>
+  <div class="container">
+    <div class="footA">
+      <h2></h2>
+      <p> <a href=" "> </a> </p>
+      <nav class="footD">
+        <ul>
+          <li><a href="#"><span class="fa fa-twitter" title="Twitter"></span></a></li>
+          <li><a href="#"><span class="fa fa-facebook" title="Facebook"></span></a></li>
+          <li><a href="#"><span class="fa fa-instagram" title="Instagram"></span></a></li>
+          <li><a href="#"><span class="fa fa-youtube" title="YouTube"></span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="footB">
+      <div>
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#">Top</a></li>
+          <li><a href="#">Imformation</a></li>
+          <li><a href="#">Access</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="footC"> All rights reserved. </div>
+  </div>
+</footer>
+<script src="https://use.fontawesome.com/da82d66dc5.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+  $(function(){
+  $(".headC").click(function(){
+  $(".headB").slideToggle();
+  });
+  });
+</script>
+
+{% endblock %}
