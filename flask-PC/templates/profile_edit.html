@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<section class="conA thick_band">
+	<div class="container"> <img src="{{ img_url }}" align="center">
+	  <h1> {{ user_last_name}} {{ user_first_name}} </h1>
+  </div>
+</section>
+<section class="conB">
+  <div class="container">
+    <div class="text">
+      <h2><span>所属</span></h2>
+	  <p>{{ user_company_name}}</p>
+      <h3><span>役職</span></h3>
+	  <p>
+          {% if user_position %}
+             {{ user_position  }}
+          {% endif %}
+	  </p>
+    </div>
+    <div class="text">
+      <h2><span>自己紹介</span></h2>
+      <div class="textbox">
+        <p>
+          {% if user_whoiam %}
+             {{ user_whoiam  }}
+          {% endif %}
+		</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="conC">
+  <div class="container">
+    <div class="text">
+      <h2><span>
+      {% if user_last_name  %}
+	  {{ user_last_name  }} {{ user_first_name  }} さんイチオシのサービス
+          {% endif %}
+	  </span></h2>
+      <p></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footA">
+      <h2></h2>
+      <p> <a href=" "> </a> </p>
+      <nav class="footD">
+        <ul>
+          <li><a href="#"><span class="fa fa-twitter" title="Twitter"></span></a></li>
+          <li><a href="#"><span class="fa fa-facebook" title="Facebook"></span></a></li>
+          <li><a href="#"><span class="fa fa-instagram" title="Instagram"></span></a></li>
+          <li><a href="#"><span class="fa fa-youtube" title="YouTube"></span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="footB">
+      <div>
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#">Top</a></li>
+          <li><a href="#">Imformation</a></li>
+          <li><a href="#">Access</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="footC"> All rights reserved. </div>
+  </div>
+
+<!--編集完了ボタン-->
+	<div class="container-small">
+		<a href="X_project.html" class="headA"><img src="edit.img" alt""></a>
+		<button type="button">
+			<span class="fa fa-bars"></span>
+		</button>
+	</div>
+
+</footer>
+<script src="https://use.fontawesome.com/da82d66dc5.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+  $(function(){
+  $(".headC").click(function(){
+  $(".headB").slideToggle();
+  });
+  });
+</script>
+
+{% endblock %}

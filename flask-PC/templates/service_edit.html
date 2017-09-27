@@ -5,41 +5,43 @@
 
 
 <section class="conA thick_band">
-  <div class="container"> <img src="{{ company_background }}" align="center">
-	  <h1>{% if company_name %}
-        {{ company_name}}
+  <div class="container"> <img src="{{ service_background}}" align="center">
+	  <h1>{% if sevice_name %}
+        {{ sevice_name}}
         {% endif %}</h1>
   </div>
 </section>
 
 <section class="conB">
   <div class="container">
-    <div class="company_message">
-      <h1><span>{% if company_mission %}
-                   {{ company_mission  }}
+    <div class="text">
+      <h1><span>{% if sevice_mission %}
+                   {{ sevice_mission  }}
                 {% endif %}</span></h1>
     </div>
 
     <div class="text">
-      <h2><span>私たちの想い</span></h2>
+      <h2><span>サービス概要</span></h2>
       <div class="textbox">
         <p>
-          {% if company_thought %}
-             {{ company_thought  }}
+          {% if sevice_discription %}
+             {{ sevice_discription  }}
           {% endif %}
         </p>
       </div>
     </div>
+<!-- ソフトウェアの場合スペック情報が入ります。
+      そうでない場合は非表示。-->
+{% if company_strongpoint %}
     <div class="text">
-      <h2><span>何をしているか</span></h2>
+      <h2><span>スペック</span></h2>
       <div class="textbox">
         <p>
-          {% if company_discription %}
-             {{ company_discription  }}
-          {% endif %}
+             {{ company_strongpoint  }}
         </p>
       </div>
     </div>
+{% endif %}
   </div>
 </section>
 <section>
@@ -50,47 +52,25 @@
 <section class="conB">
   <div class="container">
     <div class="text">
-      <h2><span>私たちの強み</span></h2>
+      <h2><span>{{ sevice_name}}のここがスゴイ</span></h2>
       <div class="textbox">
         <p>
-          {% if company_strongpoint %}
-             {{ company_strongpoint  }}
+          {% if sevice_strongpoint %}
+             {{ sevice_strongpoint  }}
           {% endif %}
         </p>
       </div>
     </div>
   </div>
 </section>
-<section class="conC">
-  <div class="container">
-    <div class="text">
-      <h2><span>
-        {% if company_name %}
-        {{ company_name}}のサービス
-        {% endif %}
-	  </span></h2>
-      <p></p>
-    </div>
-  </div>
-</section>
-{% for service_name, service_category, service_message, service_discription in services %}<!-- ここでサービスの一覧を生成したい -->
-<section class="conD">
-  <div class="container">
-    <div class="photo">
-      <img src="{{ service_img }}" alt="img" width="150px" height="150px">
-    </div>
-    <div class="text">
-      <h2>{{ service_name }}</h2>
-      <h3>{{ service_category }}</h3>
-      <p>{{ service_message }}</p>
-      <p>{{ service_discription }}</p>
-    </div>
-  </div>
-</section>
-<hr style="border:0;border-top:3px solid #e6e6fa;">
-{% end %}
 
-
+<!--編集完了ボタン-->
+	<div class="container-small">
+		<a href="X_project.html" class="headA"><img src="edit.img" alt""></a>
+		<button type="button">
+			<span class="fa fa-bars"></span>
+		</button>
+	</div>
 
 
 
