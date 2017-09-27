@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% block content %}
+  <!-- Form
+  ================================================== -->
+
+
+<section class="conA thick_band">
+  <div class="container"> <img src="{{ service_background}}" align="center">
+	  <h1>{% if sevice_name %}
+        {{ sevice_name}}
+        {% endif %}</h1>
+  </div>
+</section>
+
+<section class="conB">
+  <div class="container">
+    <div class="text">
+      <h1><span>{% if sevice_mission %}
+                   {{ sevice_mission  }}
+                {% endif %}</span></h1>
+    </div>
+
+    <div class="text">
+      <h2><span>サービス概要</span></h2>
+      <div class="textbox">
+        <p>
+          {% if sevice_discription %}
+             {{ sevice_discription  }}
+          {% endif %}
+        </p>
+      </div>
+    </div>
+<!-- ソフトウェアの場合スペック情報が入ります。
+      そうでない場合は非表示。-->
+{% if company_strongpoint %}
+    <div class="text">
+      <h2><span>スペック</span></h2>
+      <div class="textbox">
+        <p>
+             {{ company_strongpoint  }}
+        </p>
+      </div>
+    </div>
+{% endif %}
+  </div>
+</section>
+<section>
+    <div class="conA img_band">
+      <p></p>
+    </div>
+</section>
+<section class="conB">
+  <div class="container">
+    <div class="text">
+      <h2><span>{{ sevice_name}}のここがスゴイ</span></h2>
+      <div class="textbox">
+        <p>
+          {% if sevice_strongpoint %}
+             {{ sevice_strongpoint  }}
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--編集完了ボタン-->
+	<div class="container-small">
+		<a href="X_project.html" class="headA"><img src="edit.img" alt""></a>
+		<button type="button">
+			<span class="fa fa-bars"></span>
+		</button>
+	</div>
+
+
+
+<footer>
+  <div class="container">
+    <div class="footA">
+      <h2></h2>
+      <p> <a href=" "> </a> </p>
+      <nav class="footD">
+        <ul>
+          <li><a href="#"><span class="fa fa-twitter" title="Twitter"></span></a></li>
+          <li><a href="#"><span class="fa fa-facebook" title="Facebook"></span></a></li>
+          <li><a href="#"><span class="fa fa-instagram" title="Instagram"></span></a></li>
+          <li><a href="#"><span class="fa fa-youtube" title="YouTube"></span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="footB">
+      <div>
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#">Top</a></li>
+          <li><a href="#">Imformation</a></li>
+          <li><a href="#">Access</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="footC"> All rights reserved. </div>
+  </div>
+</footer>
+<script src="https://use.fontawesome.com/da82d66dc5.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+  $(function(){
+  $(".headC").click(function(){
+  $(".headB").slideToggle();
+  });
+  });
+</script>
+
+{% endblock %}
